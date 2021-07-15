@@ -1,24 +1,27 @@
 <template>
   <div class="events">
     <EventCard v-for="event in events" :key="event.id" :event="event" />
+    <NameCard v-for="event in events" :key="event.id" :event="event" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import EventCard from '@/components/EventCard.vue'
+import NameCard from '@/components/NameCard.vue'
 
 export default {
   name: 'Home',
   components: {
-    EventCard // register it as a child component
+    EventCard,
+    NameCard // register it as a child component
   },
   data() {
     return {
       events: [
         {
           id: 5928101,
-          category: 'animal welfare',
+          category: 'Animal Welfare',
           title: 'Cat Adoption Day',
           description: 'Find your new feline friend at this event.',
           location: 'Meow Town',
@@ -29,7 +32,7 @@ export default {
         },
         {
           id: 4582797,
-          category: 'food',
+          category: 'Food',
           title: 'Community Gardening',
           description: 'Join us as we tend to the community edible plants.',
           location: 'Flora City',
@@ -40,7 +43,7 @@ export default {
         },
         {
           id: 8419988,
-          category: 'sustainability',
+          category: 'Sustainability',
           title: 'Beach Cleanup',
           description: 'Help pick up trash along the shore.',
           location: 'Playa Del Carmen',

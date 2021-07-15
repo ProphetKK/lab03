@@ -1,13 +1,13 @@
 <template>
-  <div class="event-card">
-    <span>@{{ event.time }} on {{ event.date }}</span>
-    <h4>{{ event.title }}</h4>
+  <div class="name-card">
+    <h5>{{ event.category }}</h5>
+    <h4>{{ event.organizer }}</h4>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'EventCard',
+  name: 'NameCard',
   // props: {
   //  msg: String
   // }
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style scoped>
-.event-card {
+.name-card {
   padding: 20px;
   width: 250px;
   cursor: pointer;
@@ -29,8 +29,16 @@ export default {
   margin-bottom: 18px;
 }
 
-.event-card:hover {
+.name-card:hover {
   transform: scale(1.01);
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+h4 {
+    text-align: right;
+}
+
+h5 {
+    text-align: right;
 }
 </style>
